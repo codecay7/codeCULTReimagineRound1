@@ -16,3 +16,21 @@ body {
   background-color: white;
 }
 
+
+
+
+
+
+
+
+/* Sudhanshu feature LATEST-ARRIVALS */
+
+.latestArrival{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.latestArrival h1{
+  margin: 2em;
+}
