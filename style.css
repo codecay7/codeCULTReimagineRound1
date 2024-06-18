@@ -16,31 +16,98 @@ body {
   background-color: rgb(205, 197, 197);
 }
 
-.hero-section {
-    position: relative;
-    overflow: hidden;
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity(3) 2.4s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.carousel img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+  backdrop-filter: blur(5px);
+}
+
+.animated-text {
+  position: relative;
+  color: rgb(234, 27, 27);
+  font-size: 5rem;
+  animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
   }
-  
-  .carousel img {
-    width: 100%;
-    transition: opacity 0.1s ease-in-out;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+  50% {
+    transform: translateX(0);
   }
-  
-  .scroll-text {
-    position: absolute;
-    bottom: 20px;
-    left: -100%; /* Start off-screen */
-    transition: left 2s ease-in-out;
+
+  100% {
+    transform: translateX(100%);
   }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .scroll-text {
-      font-size: smaller;
-      bottom: 10px;
-    }
+}
+
+@media (max-width: 768px) {
+  .animated-text {
+    font-size: 1.5rem;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .animated-text {
+    font-size: 1rem;
+  }
+}
+
+.carousel-controls {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.carousel-controls button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
