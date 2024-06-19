@@ -20,7 +20,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 93vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -42,7 +42,7 @@ body {
 
 .carousel img {
   position: absolute;
-  width: 100%;
+  width: 86vw;
   height: 100%;
   object-fit: cover;
   opacity: 0;
@@ -110,23 +110,24 @@ body {
 }
 
 .carousel-controls button {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(87, 21, 185, 0.652);
   border: none;
   color: white;
   padding: 10px;
   cursor: pointer;
   font-size: 2rem;
+  border-radius: 20px 20px 20px 20px;
 }
 
 .carousel-controls button:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(23, 18, 18, 0.5);
 }
 
 /* /////////////////////////////////////////////////////////// */
 
 /* Sudhanshu feature LATEST-ARRIVALS */
 .latestArrival {
-  margin: 3em;
+  /* margin-top: 1em; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,7 +137,7 @@ body {
 .latestArrival h1{
   font-family: "Cedarville Cursive", cursive;
   font-weight: 400;
-  font-size: 4vw;
+  font-size: 3.5vw;
   font-style: normal;
 }
 .container {
