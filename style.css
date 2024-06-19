@@ -14,6 +14,7 @@ body {
   overflow-x: hidden;
   color: black;
   background-color: rgb(205, 197, 197);
+  scroll-behavior: smooth;
 }
 
 .hero {
@@ -24,15 +25,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #ffffff;
 }
 
 /* Diwakar hero feature css */
 
-.container :nth-child(4) {
-  grid-column: 3;
-  grid-row: 1 / span 2;
-}
 
 .carousel {
   position: absolute;
@@ -57,41 +54,49 @@ body {
   transform: scale(1);
 }
 
-.carousel img:hover {
-  transform: scale(1.05);
-  backdrop-filter: blur(5px);
-}
+
 
 .animated-text {
-  position: relative;
-  color: rgb(234, 27, 27);
-  font-size: 5rem;
+  display: flex;
+  width: 200%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.sliding-element {
+  font-family: 'Oswald', sans-serif;
+  color: rgb(255, 251, 251);
+  width: 50%;
+  height: 100vh;
+  background-color: rgba(23, 20, 20, 0.288);
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18vw;
   animation: slide 10s linear infinite;
 }
 
 @keyframes slide {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0%);
   }
-
-  50% {
-    transform: translateX(0);
-  }
-
   100% {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
 }
 
 @media (max-width: 768px) {
   .animated-text {
-    font-size: 1.5rem;
+    font-size: 4.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .animated-text {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
 
@@ -128,6 +133,12 @@ body {
   justify-content: center;
 }
 
+.latestArrival h1{
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-size: 4vw;
+  font-style: normal;
+}
 .container {
   margin: 2rem;
   display: grid;
@@ -184,6 +195,10 @@ body {
 .container > :nth-child(3) {
   grid-column: 2;
   grid-row: 2;
+}
+.container :nth-child(4) {
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 
 /* ///////////////////////////////// */
