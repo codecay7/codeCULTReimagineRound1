@@ -89,6 +89,9 @@ nav img {
   box-shadow: 2px 2px 2px 2px black;
   text-decoration: none;
 }
+.navlinks a:hover {
+  background-color: red;
+}
 .hero {
   position: relative;
   width: 100%;
