@@ -295,17 +295,7 @@ body {
   background-color: #2560bf;
 }
 
-.card {
- 
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 45em;
-  height: 25em;
-  margin: 40px auto;
-  overflow: hidden;
-  display: none;
-}
+
 
 #card1 {
   display: block;
@@ -333,8 +323,19 @@ body {
   z-index: 50;
 }
 
+.card {
+  background-color: #050202; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45em;
+  height: 25em;
+  margin: 40px auto;
+  overflow: hidden;
+  display: none;
+}
+
 .card img{
-  position: relative;
+ position: relative; 
   overflow: hidden;
   object-fit: cover;
   height: 100%;
@@ -345,9 +346,12 @@ body {
 .card h1{
   font-size: 30px;
   font-weight: 400;
-  position: absolute;
   color: rgb(244, 244, 244);
-  z-index: 1;
-  bottom: 10%;
-  left: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
+
+
