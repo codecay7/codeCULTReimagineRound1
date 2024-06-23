@@ -43,3 +43,22 @@ document.querySelectorAll('.close-btn').forEach(button => {
     button.closest('.card').style.display = 'none';
   });
 });
+
+
+//GSAP Animation
+gsap.from(".video-latest h1",{
+  opacity:0,
+  duration:1,
+  y:10,
+  duration:2,
+  delay:1
+})
+
+gsap.from(".image-container",{
+  duration:1,
+  y:10,
+  x:10,
+  duration:1,
+  delay:1
+})
+
