@@ -16,11 +16,12 @@ body {
   overflow-x: hidden;
   color: black;
   /* background-color: rgb(205, 197, 197); */
+  /* background-color: rgb(205, 197, 197); */
   scroll-behavior: smooth;
 }
 
 nav {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 12vh;
   width: 100%;
   display: flex;
@@ -62,7 +63,7 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0D18BD;
+  background-color: #0d18bd;
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -74,7 +75,6 @@ nav img {
 }
 .navdirectionbox a {
   text-decoration: none;
-  
 }
 
 .navlinks {
@@ -97,7 +97,7 @@ nav img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:#FFFFFF;
+  background-color: #ffffff;
 }
 
 /* Diwakar hero feature css */
@@ -109,7 +109,6 @@ nav img {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .carousel img {
@@ -204,11 +203,22 @@ nav img {
   justify-content: center;
   position: relative;
   color: white;
-  background: #BAD5FF;
+  background: #bad5ff;
+  z-index: 1;
+  position: relative;
+  color: white;
+  background: #bad5ff;
   z-index: 1;
 }
 
-.latestArrival h1{
+.latestArrival h1 {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px;
+  text-align: center;
+  z-index: 1;
   position: absolute;
   top: 45px;
   left: 50%;
@@ -230,7 +240,7 @@ nav img {
   z-index: 2;
 }
 
-.video-latest{
+.video-latest {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,6 +248,25 @@ nav img {
   width: 100%;
 }
 
+.background-video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  position: relative;
+  z-index: 2;
+}
+
+.video-latest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12em;
+  width: 100%;
+}
 
 .background-video {
   position: relative;
@@ -255,6 +284,7 @@ nav img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  z-index: 1;
 }
 
 .image-container img {
@@ -266,19 +296,17 @@ nav img {
   transition: transform 0.7s ease-in-out;
 }
 
-
-.image-container img.top{
+.image-container img.top {
   transform: translateX(100%);
 }
 
-.image-container:hover img.top{
+.image-container:hover img.top {
   transform: translateX(0);
 }
 
-.image-container:hover img.bottom{
+.image-container:hover img.bottom {
   transform: translateX(-100%);
 }
-
 
 .caption {
   position: absolute;
@@ -309,13 +337,26 @@ nav img {
   grid-column: 3;
   grid-row: 1 / span 2;
 }
+/* 
+@media (max-width: 1024px){
+  
+  .container{
+    
+  }
+  
+  
+}
 
-
+@media (max-width: 768px){
+  .container{
+    
+  }
+} */
 
 /* 
 @media (max-width: 1024px){
    */
-  /* .container{
+/* .container{
     
   }
   
@@ -331,8 +372,7 @@ nav img {
 
 /* ///////////////////////////////// */
 
-
- /* Sudhanshu feature toggle card  */
+/* Sudhanshu feature toggle card  */
 .button-container {
   display: flex;
   align-items: center;
@@ -353,30 +393,26 @@ nav img {
   font-weight: 600;
 }
 
-.toggle-btn:nth-child(1){
+.toggle-btn:nth-child(1) {
   color: rgb(237, 254, 3);
 }
-.toggle-btn:nth-child(2){
+.toggle-btn:nth-child(2) {
   color: rgb(255, 199, 17);
 }
-.toggle-btn:nth-child(3){
+.toggle-btn:nth-child(3) {
   color: rgb(13, 245, 187);
 }
-.toggle-btn:nth-child(4){
+.toggle-btn:nth-child(4) {
   color: rgb(7, 233, 52);
 }
 
-.toggle-btn:hover{
+.toggle-btn:hover {
   background-color: #2560bf;
 }
-
-
 
 #card1 {
   display: block;
 }
-
-
 
 /* .close-btn {
   background-color: #ff0000;
@@ -399,7 +435,7 @@ nav img {
 }
 
 .card {
-  background-color: #050202; 
+  background-color: #050202;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 45em;
@@ -409,16 +445,15 @@ nav img {
   display: none;
 }
 
-.card img{
- position: relative; 
+.card img {
+  position: relative;
   overflow: hidden;
   object-fit: cover;
   height: 100%;
   width: 100%;
-  
 }
 
-.card h1{
+.card h1 {
   font-size: 30px;
   font-weight: 400;
   color: rgb(244, 244, 244);
@@ -426,7 +461,6 @@ nav img {
   align-items: center;
   justify-content: center;
 }
-
 
 .book-test-ride {
   display: flex;
@@ -556,7 +590,3 @@ button[type="submit"]:hover {
     padding: 6px;
   }
 }
-
-
-
-
