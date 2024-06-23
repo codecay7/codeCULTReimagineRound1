@@ -13,8 +13,31 @@
 </head>
 
 <body>
+  <nav>
+    <img src="https://www.yamaha-motor-india.com/theme/v3/image/header-footer/yamaha-motor.png" alt="">
+
+    <div class="testride">
+      <h1>Test Ride?</h1>
+      <div  class="navdirectionbox">
+        <a href=" #book-test-ride ">
+          <i class="ri-arrow-down-line"></i></a>
+      </div>
+    </div>
+
+
+    <div class="navlinks"> <a href="">DEALER</a>
+      <a href="">SERVICE</a>
+      <a href=""> PARTS</a>
+    </div>
+
+
+  </nav>
+
 
   <!-- Diwakar feature in HERO SECTION  -->
+
+
+
   <div class="hero">
     <div class="carousel">
       <img src="https://www.yamaha-motor-india.com/theme/v3/image/webp/fzx/360/11.webp" alt="" class="carousel-image">
@@ -30,19 +53,14 @@
       <img src="https://www.yamaha-motor-india.com/theme/v3/image/webp/fzx/360/16.webp" alt="" class="carousel-image">
 
 
-      <!-- <img src="https://www.yamaha-motor-india.com/theme/v3/image/webp/mt03/color/mt03-cyan.webp?v=5"
-              alt="Image 1" class="carousel-image active">
-          <img src="https://www.yamaha-motor-india.com/theme/v3/image/webp/fzx/color/titanium.webp?v=10" alt="Image 2"
-              class="carousel-image">
-          <img src="https://www.yamaha-motor-india.com/theme/v3/image/webp/fzx/360/22.webp" alt="Image 3"
-              class="carousel-image"> -->
+     
     </div>
     <div class="animated-text">
 
       <div class="sliding-element">YAMAHA</div>
       <div class="sliding-element">YAMAHA</div>
       <div class="sliding-element">YAMAHA</div>
-      <!-- <div class="sliding-element">YAMAHA</div>  -->
+      <div class="sliding-element">YAMAHA</div> 
     </div>
 
   </div>
@@ -56,7 +74,13 @@
   <!-- Sudhanshu feature LATEST-ARRIVALS -->
 
   <div class="latestArrival">
-    <h1>NEW ARRIVALS</h1>
+    <div class="Arrivals">
+      <h1>New Arrivals</h1>
+      <div class="directionbox">
+        <i class="ri-arrow-down-line"></i>
+      </div>
+    </div>
+
 
     <div class="container">
       <div class="image-container">
@@ -76,6 +100,51 @@
         <div class="caption">XTREME 125R</div>
       </div>
     </div>
+  </div>
+
+
+  <!-- Book Test Ride Section -->
+  <div id="book-test-ride" class="book-test-ride">
+
+    <img src="Images/BikeRide.png" alt="">
+
+
+    <!-- <h2>Book a Test Ride</h2> -->
+
+    <form id="test-ride-form">
+      <!-- <h2>Book a Test Ride</h2> -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile No:</label>
+        <input type="tel" id="mobile" name="mobile" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="license">Driver License No:</label>
+        <input type="text" id="license" name="license" required>
+      </div>
+      <div class="form-group">
+        <label for="preferred-date">Preferred Date:</label>
+        <input type="date" id="preferred-date" name="preferred-date" required>
+      </div>
+      <div class="form-group">
+        <label for="preferred-bike">Preferred Bike Model:</label>
+        <select id="preferred-bike" name="preferred-bike" required>
+          <option value="Mavrick">Mavrick</option>
+          <option value="Karizma XMR">Karizma XMR</option>
+          <option value="Harley Davidson X440">Harley Davidson X440</option>
+          <option value="Xtreme 125R">Xtreme 125R</option>
+        </select>
+      </div>
+      <button type="submit">Book Now</button>
+    </form>
+
   </div>
 
   <script src="script.js"></script>
