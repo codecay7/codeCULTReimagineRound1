@@ -26,4 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // });
 });
 
+// Sudhanshu feature toggle card
 
+document.querySelectorAll('.toggle-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const targetCard = document.getElementById(button.dataset.target);
+    if (targetCard.style.display !== 'block') {
+      document.querySelectorAll('.card').forEach(card => card.style.display = 'none');
+      targetCard.style.display = 'block';
+    }
+  });
+});
+
+document.querySelectorAll('.close-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    button.closest('.card').style.display = 'none';
+  });
+});
