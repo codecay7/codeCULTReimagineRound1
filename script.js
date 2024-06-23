@@ -26,43 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // });
 });
 
+// Sudhanshu feature toggle card
 
-
-
-
-
-// Sudhanshu feature LATEST-ARRIVALS
-document.addEventListener('DOMContentLoaded', () => {
-  const imageCards = document.querySelectorAll('.image-container');
-
-  imageCards.forEach(card => {
-    card.addEventListener('mouseover', () => {
-      const img = card.querySelector('img');
-      card.style.transform = 'translateX(0)';
-      card.style.opacity = '1';
-      img.style.transform = 'scale(1.1)';
-    });
-
-    card.addEventListener('mouseout', () => {
-      const img = card.querySelector('img');
-      card.style.transform = 'translateX(-10px)';
-      card.style.opacity = '0.9';
-      img.style.transform = 'scale(1)';
-    });
+document.querySelectorAll('.toggle-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const targetCard = document.getElementById(button.dataset.target);
+    if (targetCard.style.display !== 'block') {
+      document.querySelectorAll('.card').forEach(card => card.style.display = 'none');
+      targetCard.style.display = 'block';
+    }
   });
 });
 
-
-document.addEventListener('DOMContentLoaded', () => {
-  const latestArrival = document.querySelector('.latestArrival');
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-
-    if (scrollY > 0) {
-      latestArrival.style.transform = 'translateY(-10px)';
-    } else {
-      latestArrival.style.transform = 'translateY(0)';
-    }
+document.querySelectorAll('.close-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    button.closest('.card').style.display = 'none';
   });
 });
