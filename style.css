@@ -20,7 +20,7 @@ body {
 }
 
 nav {
-  background-color: #dedddd;
+  background-color: #FFFFFF;
   height: 12vh;
   width: 100%;
   display: flex;
@@ -97,7 +97,7 @@ nav img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:#DEDDDD;
+  background-color:#FFFFFF;
 }
 
 /* Diwakar hero feature css */
@@ -310,9 +310,12 @@ nav img {
   grid-row: 1 / span 2;
 }
 
-/* @media (max-width: 1024px){
-  
-  .container{
+
+
+/* 
+@media (max-width: 1024px){
+   */
+  /* .container{
     
   }
   
@@ -323,8 +326,8 @@ nav img {
   .container{
     
   }
-} */
-
+}
+ */
 
 /* ///////////////////////////////// */
 
@@ -422,6 +425,136 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+
+.book-test-ride {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #4b39b5;
+  font-family: "Noto Sans", sans-serif;
+  color: rgb(255, 255, 255);
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+
+  padding: 20px;
+}
+.book-test-ride img {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.form h2 {
+  font-size: 4rem;
+  opacity: 0.5;
+  margin-right: 55%;
+  color: white;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#test-ride-form {
+  height: 100%;
+  width: 100%;
+  /* background-color: rgb(42, 35, 35); */
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 30px 110px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #000;
+}
+
+button[type="submit"] {
+  /* display: block; */
+  width: 100%;
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #190f0f;
+  color: rgb(227, 220, 220);
+  border: 2px solid rgb(255, 238, 0);
+}
+
+@media (max-width: 768px) {
+  .book-test-ride {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .book-test-ride img {
+    padding: 20px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 8px;
+  }
+
+  button[type="submit"] {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-test-ride img {
+    padding: 20px;
+  }
+  .book-test-ride {
+    /* padding: 10px; */
+    flex-direction: column;
+  }
+
+  .form h2 {
+    font-size: 1.5em;
+  }
+
+  .form-group label {
+    font-size: 0.9em;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 6px;
+  }
+
+  button[type="submit"] {
+    padding: 6px;
+  }
 }
 
 
