@@ -46,8 +46,8 @@ document.querySelectorAll('.close-btn').forEach(button => {
 
 
 //GSAP Animation
-gsap.from(".video-latest h1",{
-  opacity:0,
+gsap.to(".video-latest h1",{
+  // opacity:1,
   duration:1,
   y:10,
   duration:2,
