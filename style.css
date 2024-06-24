@@ -222,13 +222,7 @@ nav img {
   font-size: 48px;
   text-align: center;
   z-index: 1;
-  position: absolute;
-  top: 45px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 48px;
-  text-align: center;
-  z-index: 1;
+  
 }
 .container-latest {
   /* background-color: #a6b0df; */
