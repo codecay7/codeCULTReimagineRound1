@@ -46,19 +46,32 @@ document.querySelectorAll('.close-btn').forEach(button => {
 
 
 //GSAP Animation
-gsap.to(".video-latest h1",{
-  // opacity:1,
-  duration:1,
-  y:10,
-  duration:2,
-  delay:1
-})
+// gsap.to(".video-latest h1",{
+//   // opacity:1,
+//   x:10,
+//   y:10,
+//   color:"green",
+//   duration:2,
+//   delay:1
+// })
 
-gsap.from(".image-container",{
-  duration:1,
-  y:10,
-  x:10,
-  duration:1,
-  delay:1
-})
+// gsap.from(".image-container",{
+//   duration:1,
+//   y:10,
+//   x:10,
+//   duration:1,
+//   delay:1
+// })
 
+// script.js
+
+// Select the h1 element using GSAP
+const heading = document.getElementById('vid-lat');
+
+// Create a GSAP timeline
+const tl = gsap.timeline({ repeat: -1 });
+
+// Add color animations to the timeline
+tl.to(heading, { duration: 2, color: 'red' })
+  .to(heading, { duration: 2, color: 'white' })
+  .to(heading, { duration: 2, color: 'blue' });
