@@ -208,10 +208,6 @@ nav img {
   color: white;
   background: #bad5ff;
   z-index: 1;
-  position: relative;
-  color: white;
-  background: #bad5ff;
-  z-index: 1;
 }
 
 .latestArrival h1 {
@@ -222,10 +218,9 @@ nav img {
   font-size: 48px;
   text-align: center;
   z-index: 1;
-  
 }
+
 .container-latest {
-  /* background-color: #a6b0df; */
   margin: 2rem;
   display: grid;
   gap: 20px;
