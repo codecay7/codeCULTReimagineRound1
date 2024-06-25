@@ -44,21 +44,32 @@ document.querySelectorAll('.close-btn').forEach(button => {
   });
 });
 
+/* Keyframe animation of full page*/
+document.addEventListener("DOMContentLoaded", function() {
+  const animatedElements = document.querySelectorAll(".fullpart > *");
+  const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3
+  };
 
-//GSAP Animation
-gsap.from(".video-latest h1",{
-  opacity:0,
-  duration:1,
-  y:10,
-  duration:2,
-  delay:1
-})
-
-gsap.from(".image-container",{
-  duration:1,
-  y:10,
-  x:10,
-  duration:1,
-  delay:1
-})
-
+  function intersectionCallback(entries, observer) {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("animated"); 
+              observer.unobserve(entry.target); 
+          }
+      });
+  }
+  const observer = new IntersectionObserver(intersectionCallback, observerOptions);
+  animatedElements.forEach(element => {
+      observer.observe(element);
+  });
+});
+ 
+// h1 of new arrival changing in three colors
+const heading = document.getElementById('vid-lat');
+const tl = gsap.timeline({ repeat: -1 });
+tl.to(heading, { duration: 2, color: 'red' })
+  .to(heading, { duration: 2, color: 'white' })
+  .to(heading, { duration: 2, color: 'blue' });

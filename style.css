@@ -199,15 +199,24 @@ nav img {
 
 /* Sudhanshu feature LATEST-ARRIVALS */
 
+/* Keyframe animation of full page*/
+.fullpart > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .latestArrival {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  color: white;
-  background: #bad5ff;
-  z-index: 1;
   position: relative;
   color: white;
   background: #bad5ff;
@@ -222,16 +231,13 @@ nav img {
   font-size: 48px;
   text-align: center;
   z-index: 1;
-  position: absolute;
-  top: 45px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 48px;
-  text-align: center;
-  z-index: 1;
+  border: 8px solid blue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
-.container {
-  /* background-color: #a6b0df; */
+
+
+.container-latest {
   margin: 2rem;
   display: grid;
   gap: 20px;
@@ -322,28 +328,28 @@ nav img {
 }
 
 /* Positioning the images in the grid */
-.container > :nth-child(1) {
+.container-latest > :nth-child(1) {
   grid-column: 1;
   grid-row: 1 / span 2;
 }
 
-.container > :nth-child(2) {
+.container-latest > :nth-child(2) {
   grid-column: 2;
   grid-row: 1;
 }
 
-.container > :nth-child(3) {
+.container-latest > :nth-child(3) {
   grid-column: 2;
   grid-row: 2;
 }
-.container :nth-child(4) {
+.container-latest :nth-child(4) {
   grid-column: 3;
   grid-row: 1 / span 2;
 }
 /* 
 @media (max-width: 1024px){
   
-  .container{
+  .container-latest{
     
   }
   
@@ -351,7 +357,7 @@ nav img {
 }
 
 @media (max-width: 768px){
-  .container{
+  .container-latest{
     
   }
 } */
@@ -359,7 +365,7 @@ nav img {
 /* 
 @media (max-width: 1024px){
    */
-/* .container{
+/* .container-latest{
     
   }
   
@@ -367,7 +373,7 @@ nav img {
 }
 
 @media (max-width: 768px){
-  .container{
+  .container-latest{
     
   }
 }
