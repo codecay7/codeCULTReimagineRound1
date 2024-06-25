@@ -199,6 +199,19 @@ nav img {
 
 /* Sudhanshu feature LATEST-ARRIVALS */
 
+/* Keyframe animation of full page*/
+.fullpart > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .latestArrival {
   display: flex;
   flex-direction: column;
@@ -218,8 +231,10 @@ nav img {
   font-size: 48px;
   text-align: center;
   z-index: 1;
+  border: 8px solid blue;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
-
 .container-latest {
   margin: 2rem;
   display: grid;

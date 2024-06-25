@@ -44,34 +44,32 @@ document.querySelectorAll('.close-btn').forEach(button => {
   });
 });
 
+/* Keyframe animation of full page*/
+document.addEventListener("DOMContentLoaded", function() {
+  const animatedElements = document.querySelectorAll(".fullpart > *");
+  const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3
+  };
 
-//GSAP Animation
-// gsap.to(".video-latest h1",{
-//   // opacity:1,
-//   x:10,
-//   y:10,
-//   color:"green",
-//   duration:2,
-//   delay:1
-// })
-
-// gsap.from(".image-container",{
-//   duration:1,
-//   y:10,
-//   x:10,
-//   duration:1,
-//   delay:1
-// })
-
-// script.js
-
-// Select the h1 element using GSAP
+  function intersectionCallback(entries, observer) {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("animated"); 
+              observer.unobserve(entry.target); 
+          }
+      });
+  }
+  const observer = new IntersectionObserver(intersectionCallback, observerOptions);
+  animatedElements.forEach(element => {
+      observer.observe(element);
+  });
+});
+ 
+// h1 of new arrival changing in three colors
 const heading = document.getElementById('vid-lat');
-
-// Create a GSAP timeline
 const tl = gsap.timeline({ repeat: -1 });
-
-// Add color animations to the timeline
 tl.to(heading, { duration: 2, color: 'red' })
   .to(heading, { duration: 2, color: 'white' })
   .to(heading, { duration: 2, color: 'blue' });
