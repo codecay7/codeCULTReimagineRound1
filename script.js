@@ -28,19 +28,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Sudhanshu feature toggle card
 
-document.querySelectorAll('.toggle-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const targetCard = document.getElementById(button.dataset.target);
-    if (targetCard.style.display !== 'block') {
-      document.querySelectorAll('.card').forEach(card => card.style.display = 'none');
-      targetCard.style.display = 'block';
-    }
-  });
-});
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all navbar items
+  const navbarItems = document.querySelectorAll('.navbar-item');
 
-document.querySelectorAll('.close-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    button.closest('.card').style.display = 'none';
+  // Select all content sections
+  const contents = document.querySelectorAll('.content');
+
+  // Set the first content section to be active by default
+  contents[0].classList.add('active');
+
+  // Add click event listener to each navbar item
+  navbarItems.forEach(item => {
+      item.addEventListener('click', function() {
+          // Remove active class from all navbar items
+          navbarItems.forEach(navItem => navItem.classList.remove('active'));
+          // Add active class to the clicked navbar item
+          item.classList.add('active');
+
+          // Hide all content sections
+          contents.forEach(content => content.classList.remove('active'));
+
+          // Show the corresponding content section
+          const target = item.getAttribute('data-target');
+          document.getElementById(target).classList.add('active');
+
+          // Check if the content section is content1-B and activate it
+          if (target === 'content1-B') {
+              document.getElementById(target).classList.add('active');
+          }
+      });
   });
 });
 

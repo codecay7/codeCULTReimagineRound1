@@ -9,7 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Oswald:wght@400;700&display=swap"
     rel="stylesheet">
-
+ <!-- Tailwind CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -109,35 +110,58 @@
   <!-- ////////////////////////// -->
 
   <!-- Sudhanshu feature toggle card -->
-  <div class="button-container">
-    <button class="toggle-btn" data-target="card1">Media</button>
-    <button class="toggle-btn" data-target="card2">Videos</button>
-    <button class="toggle-btn" data-target="card3">Updates</button>
-    <button class="toggle-btn" data-target="card4">Gallary</button>
+  <nav class="bg-gray-800">
+    <div class="container mx-auto flex justify-center">
+      <ul class="flex space-x-0">
+        <li class="navbar-item text-blue-600 hover:text-blue-600 active" data-target="content1">
+          <a href="#" class="block px-4 py-2">Contest</a>
+        </li>
+        <li class="navbar-item text-yellow-600 hover:text-yellow-600" data-target="content2">
+          <a href="#" class="block px-4 py-2">Achievments</a>
+        </li>
+        <li class="navbar-item text-green-600 hover:text-green-600" data-target="content3">
+          <a href="#" class="block px-4 py-2">Our Stories</a>
+        </li>
+        <li class="navbar-item text-red-600 hover:text-red-600" data-target="content4">
+          <a href="#" class="block px-4 py-2">News</a>
+        </li>
+        <li class="navbar-item text-purple-600 hover:text-purple-600" data-target="content5">
+          <a href="#" class="block px-4 py-2">Videos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="content1" class="content active">
+  
+      <div class="content-item">
+          <img src="https://www.yamaha-motor-india.com/theme/v3/image/webp/motogp-contest/predict_win-pc.webp?v=5" alt="">
+          <div class="img-content">
+              
+          </div>
+      </div> 
   </div>
-
-  <div id="card1" class="card">
-    <h1>Media</h1>
-    <img src="Images/bike3.jpg" alt="">
-
+  
+  <div id="content2" class="content">
+      <h2>another</h2>
+      <p>This is the content for Docs.</p>
   </div>
-
-  <div id="card2" class="card">
-    <h1>Videos</h1>
-    <img src="Images/bike2.jpg" alt="">
-
+  
+  <div id="content3" class="content">
+      <h2>Docs Content</h2>
+      <p>This is the content for Docs.</p>
   </div>
-
-  <div id="card3" class="card">
-    <h1>Updates</h1>
-    <img src="Images/bike5.jpg" alt="">
-
+  <div id="content4" class="content">
+      <h2>PyPI Content</h2>
+      <p>This is the content for PyPI.</p>
   </div>
-
-  <div id="card4" class="card">
-    <h1>Gallary</h1>
-    <img src="Images/bike8.jpg" alt="">
-
+  <div id="content5" class="content">
+      <h2>Jobs Content</h2>
+      <p>This is the content for Jobs.</p>
+  </div>
+  <div id="content6" class="content">
+      <h2>Community Content</h2>
+      <p>This is the content for Community.</p>
   </div>
 
 
