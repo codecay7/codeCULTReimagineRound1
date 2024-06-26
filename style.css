@@ -434,6 +434,8 @@ nav img {
   display: block;
 }
 
+/* contest part */
+
 .content-item {
   position: relative;
   width: 100%;
@@ -471,8 +473,207 @@ nav img {
   text-align: center;
   width: 100%;
 }
+
+/* Achievment part */
+
+.cart-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* gap: 4px; */
+}
+
+.cart1cont{
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  /* background-color: rgb(180, 39, 39); */
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.cart1cont img{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ transition: transform 0.3s ease;
+}
+
+.cart1cont::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color:  rgba(45, 89, 223, 0.8);
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: 1;
+}
+
+.cart1cont:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.cart1cont:hover img {
+  transform: scale(1.1);
+}
+
+.cart1cont .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+}
+
+.cart1cont:hover .text {
+  /* bottom: 30%; */
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.text h2{
+  font-size: 2rem;
+}
+
+.cart2cont{
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  /* background-color: rgb(180, 39, 39); */
+  overflow: hidden;
+  border-radius: 3px;
+}
+.cart2cont img{
+ width: 100%;
+ height: 100%;
+ /* object-fit: cover; */
+ transition: transform 0.3s ease;
+}
+
+.cart2cont::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color:  rgba(45, 89, 223, 0.8);
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: 1;
+}
+
+.cart2cont:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.cart2cont:hover img {
+  transform: scale(1.1);
+}
+
+.cart2cont .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+}
+
+.cart2cont:hover .text {
+  /* bottom: 30%; */
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.text h2{
+  font-size: 2rem;
+}
+
+
+.cart3cont{
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  /* background-color: rgb(180, 39, 39); */
+  overflow: hidden;
+  border-radius: 3px;
+}
+.cart3cont img{
+ width: 100%;
+ height: 100%;
+ /* object-fit: cover; */
+ transition: transform 0.3s ease;
+
+}
+
+.cart3cont::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background-color: rgba(45, 89, 223, 0.8);
+  transition: width 0.3s ease, height 0.3s ease;
+  z-index: 1;
+}
+
+.cart3cont:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.cart3cont:hover img {
+  transform: scale(1.1);
+}
+
+.cart3cont .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: bottom 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  z-index: 2;
+}
+
+.cart3cont:hover .text {
+  /* bottom: 30%; */
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.text h2{
+  font-size: 2rem;
+}
+
 /* /////////////////// */
 
+
+
+/* Diwakar ride test */
 .book-test-ride {
   display: flex;
   flex-direction: row;
@@ -485,7 +686,7 @@ nav img {
   position: relative;
   min-height: 100vh;
   width: 100%;
-
+  margin-top: 3rem;
   padding: 20px;
 }
 .book-test-ride img {
