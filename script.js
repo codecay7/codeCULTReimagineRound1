@@ -29,31 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
 // Sudhanshu feature toggle card
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Select all navbar items
   const navbarItems = document.querySelectorAll('.navbar-item');
-
-  // Select all content sections
   const contents = document.querySelectorAll('.content');
-
-  // Set the first content section to be active by default
   contents[0].classList.add('active');
-
-  // Add click event listener to each navbar item
   navbarItems.forEach(item => {
       item.addEventListener('click', function() {
-          // Remove active class from all navbar items
+
           navbarItems.forEach(navItem => navItem.classList.remove('active'));
-          // Add active class to the clicked navbar item
           item.classList.add('active');
-
-          // Hide all content sections
           contents.forEach(content => content.classList.remove('active'));
-
-          // Show the corresponding content section
           const target = item.getAttribute('data-target');
           document.getElementById(target).classList.add('active');
-
-          // Check if the content section is content1-B and activate it
           if (target === 'content1-B') {
               document.getElementById(target).classList.add('active');
           }
@@ -90,3 +76,6 @@ const tl = gsap.timeline({ repeat: -1 });
 tl.to(heading, { duration: 2, color: 'red' })
   .to(heading, { duration: 2, color: 'white' })
   .to(heading, { duration: 2, color: 'blue' });
+
+
+ 

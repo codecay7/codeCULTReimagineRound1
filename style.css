@@ -394,7 +394,7 @@ nav img {
 .navbar-item::before {
   content: '';
   position: absolute;
-  left: 45%;  /* Position arrow to the left of the text */
+  left: 45%;  
   top: 17%;
   transform: translateY(-50%) scaleY(0);
   width: 0;
@@ -412,17 +412,17 @@ nav img {
 .navbar-item::after {
   content: '';
   position: absolute;
-  top: 0; /* Position the line above the text */
+  top: 0;
   left: 0;
   width: 100%;
   height: 4px;
   background-color: currentColor;
-  transform: scaleX(0); /* Initially hide the line */
+  transform: scaleX(0);
   transition: transform 0.3s ease;
 }
 
 .navbar-item.active::after {
-  transform: scaleX(1); /* Show the line when active */
+  transform: scaleX(1); 
 }
 
 .content {
@@ -435,7 +435,6 @@ nav img {
 }
 
 /* contest part */
-
 .content-item {
   position: relative;
   width: 100%;
@@ -444,26 +443,14 @@ nav img {
 }
 
 .content-item img {
+  /* position: absolute; */
+  top: 0;
+  left: 100%;
   width: 100%;
   height: auto;
-  display: block;
-  margin: 0 auto;
-  animation: zoomInOut 10s infinite alternate;
 }
 
-@keyframes zoomInOut {
-  0% {
-      transform: scale(1);
-  }
-  50% {
-      transform: scale(1.03);
-  }
-  100% {
-      transform: scale(1);
-  }
-}
-
-.img-content {
+/* .img-content {
   position: absolute;
   bottom: 50%;
   left: 50%;
@@ -472,7 +459,7 @@ nav img {
   padding: 10px;
   text-align: center;
   width: 100%;
-}
+} */
 
 /* Achievment part */
 
