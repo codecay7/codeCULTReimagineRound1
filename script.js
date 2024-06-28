@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", function() {
   const navbarItems = document.querySelectorAll('.navbar-item');
-  const contents = document.querySelectorAll('.content');
+  const contents = document.querySelectorAll('.contentsudo');
   contents[0].classList.add('active');
   navbarItems.forEach(item => {
       item.addEventListener('click', function() {
@@ -78,4 +78,25 @@ tl.to(heading, { duration: 2, color: 'red' })
   .to(heading, { duration: 2, color: 'blue' });
 
 
- 
+ // Sliding image of content1
+ document.addEventListener('DOMContentLoaded', function() {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('#content1 .slider-item');
+  const dots = document.querySelectorAll('.dot');
+  const totalSlides = slides.length;
+
+  function changeSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides; // Move to the next slide or loop back to the first slide
+    slides.forEach((slide, index) => {
+      slide.style.display = index === currentSlide ? 'block' : 'none';
+    });
+
+    // Update active dot
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+  }
+
+  setInterval(changeSlide, 5000); // Change slide every 5 seconds
+});
+
