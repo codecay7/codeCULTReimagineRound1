@@ -9,7 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Oswald:wght@400;700&display=swap"
     rel="stylesheet">
-
+ <!-- Tailwind CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -109,36 +110,190 @@
   <!-- ////////////////////////// -->
 
   <!-- Sudhanshu feature toggle card -->
-  <div class="button-container">
-    <button class="toggle-btn" data-target="card1">Media</button>
-    <button class="toggle-btn" data-target="card2">Videos</button>
-    <button class="toggle-btn" data-target="card3">Updates</button>
-    <button class="toggle-btn" data-target="card4">Gallary</button>
+  <nav class="bg-gray-800">
+    <div class="container mx-auto flex justify-center">
+      <ul class="flex space-x-0">
+        <li class="navbar-item text-blue-600 hover:text-blue-600 active" data-target="content1">
+          <a href="#" class="block px-4 py-2">Contest</a>
+        </li>
+        <li class="navbar-item text-yellow-600 hover:text-yellow-600" data-target="content2">
+          <a href="#" class="block px-4 py-2">Achievments</a>
+        </li>
+        <li class="navbar-item text-green-600 hover:text-green-600" data-target="content3">
+          <a href="#" class="block px-4 py-2">Our Stories</a>
+        </li>
+        <li class="navbar-item text-red-600 hover:text-red-600" data-target="content4">
+          <a href="#" class="block px-4 py-2">News</a>
+        </li>
+        <li class="navbar-item text-purple-600 hover:text-purple-600" data-target="content5">
+          <a href="#" class="block px-4 py-2">Videos</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="content1" class="contentsudo active">
+    <div class="slider">
+        <div class="slider-wrapper">
+            <div class="slider-item">
+                <img src="https://www.yamaha-motor-india.com/theme/v3/image/webp/motogp-contest/predict_win-pc.webp?v=5" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://www.yamaha-motor-india.com/theme/v3/image/home/webp/cotb_trichy_2024.webp?v=10" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://www.yamaha-motor-india.com/theme/v3/image/home/webp/motogp_netherland_2024-pc.webp" alt="">
+            </div>
+            <div class="slider-item">
+                <img src="https://www.yamaha-motor-india.com/theme/v3/image/events/event-new/event-banner1.jpg" alt="">
+            </div>
+        
+        </div>
+    </div>
+</div>
+ 
+<div class="dots">
+    <span class="dot active" data-slide="0"></span>
+    <span class="dot" data-slide="1"></span>
+    <span class="dot" data-slide="2"></span>
+    <span class="dot" data-slide="3"></span>
+
+</div>
+
+  
+  <div id="content2" class="contentsudo">
+      <div class="cart-content">
+        <div class="cart1cont">
+          <img src="https://global.yamaha-motor.com/design_technology/technology/awards/shared/img/others_2019_casting1.jpg" alt="">
+          <div class="text">
+            <h2>Japan of the Year Award</h2>
+            <p>These cast aluminum wheels for a sport Leaning Multi-Wheel (LMW)* model feature both light weight and high rigidity achieved through finite element analysis (FEA).</p>
+          </div>
+        </div>
+
+        <div class="cart2cont">
+          <img src="https://global.yamaha-motor.com/design_technology/technology/awards/shared/img/ibex_2013_1.jpg" alt="">
+          <div class="text">
+            <h2>IBEX Innovation Award</h2>
+            <p>This control system for outboard-mounted boats aids pilots with the various operations needed when docking, setting off.</p>
+          </div>
+        </div>
+
+        <div class="cart3cont">
+          <img src="https://global.yamaha-motor.com/design_technology/technology/awards/shared/img/others_2017_interbike_1.jpg" alt="">
+          <div class="text">
+            <h2>Interbike Product Innovation Awards</h2>
+            <p>This electric power-assist system designed for mountain bikes consists of easy-to-use ergonomic switches.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  
+  <div id="content3" class="contentsudo">
+    <div class="cart-content">
+      <div class="cart1cont">
+        <img src="https://global.yamaha-motor.com/stories/history/stories/img/0001/pic_001.jpg" alt="">
+        <div class="text">
+          <h2>1953-1955</h2>
+          <p>Entering the Motorcycle Market and Establishing Yamaha Motor Co., Ltd.</p>
+        </div>
+      </div>
+
+      <div class="cart2cont">
+        <img src="https://global.yamaha-motor.com/stories/history/stories/img/0019/pic_001.jpg" alt="">
+        <div class="text">
+          <h2>1969-1980</h2>
+          <p>Technological Revolution and Energy-Saving Engine Systems.</p>
+        </div>
+      </div>
+
+      <div class="cart3cont">
+        <img src="https://global.yamaha-motor.com/stories/history/stories/img/0039/pic_001.jpg" alt="">
+        <div class="text">
+          <h2>2001-2005</h2>
+          <p>A New Generation of Motorcycles Born of Innovative Technologies and Concepts.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div id="card1" class="card">
-    <h1>Media</h1>
-    <img src="Images/bike3.jpg" alt="">
+  <div id="content4" class="contentsudo">
+      <div class="cart-main-cont">
+        <div class="cart1maincont">
+          <h1>Launches Fascino S </h1>
+          <p>Available in the exhilarating Matte Red,  Matte Black and Dark Matte Blue colour shades.</p>
+          <div class="cart1mainimg">
+            <img src="https://www.yamaha-motor-india.com/theme/v3/image/webp/fascino125fi-new/color/Disc/blue.webp" alt="">
+          </div>
+         <a href="#">Read More</a>
+        </div>
 
+        <div class="cart1maincont">
+          <h1>Exciting Colour Schemes </h1>
+          <p>introduction of vibrant color schemes and graphical enhancement.</p>
+          <div class="cart1mainimg">
+            <img src="https://www.yamaha-motor-india.com/theme/v3/image/webp/r15v4/color/blue.webp" alt="">
+          </div>
+         <a href="#">Read More</a>
+        </div>
+
+        <div class="cart1maincont">
+          <h1> much-awaited R3 and MT-03 in India </h1>
+          <p>The Supersport bike R3 flaunts R1 inspired looks and track-oriented design.</p>
+          <div class="cart1mainimg">
+            <img src="https://www.yamaha-motor-india.com/theme/v3/image/webp/mt03/color/mt03-cyan.webp" alt="">
+          </div>
+         <a href="#">Read More</a>
+        </div>
+
+        <div class="cart1maincont">
+          <h1>Opens Three New ‘Blue Square’ Outlets in Bangalore </h1>
+          <p>The Blue Square showroom launched under the banner of ‘Pacer Motors’. </p>
+          <div class="cart1mainimg">
+            <img src="https://www.yamaha-motor-india.com/theme/v3/image/news/vinayak-motors.jpg" alt="">
+          </div>
+         <a href="#">Read More</a>
+        </div>
+
+      </div>
   </div>
 
-  <div id="card2" class="card">
-    <h1>Videos</h1>
-    <img src="Images/bike2.jpg" alt="">
-
+  <div id="content5" class="contentsudo">
+    <div class="video-container">
+      <div class="video-thumbnail">
+          <img src="https://www.yamaha-motor-india.com/theme/v3/image/video/products/MT15_movie_thumb.webp?v=2" alt="Video Thumbnail">
+          <div class="play-icon-container" data-video-url="https://www.youtube.com/embed/52iPSOqEkis?autoplay=1">
+              <div class="play-icon">&#9658;</div>
+          </div>
+      </div>
+      <div class="video-thumbnail">
+          <img src="https://www.yamaha-motor-india.com/theme/v3/image/video/products/fzx-tvc-titan.webp?v=10?v=2" alt="Video Thumbnail">
+          <div class="play-icon-container" data-video-url="https://www.youtube.com/embed/Wmz_clndaSg?autoplay=1
+          ">
+              <div class="play-icon">&#9658;</div>
+          </div>
+      </div>
+      <div class="video-thumbnail">
+          <img src="https://www.yamaha-motor-india.com/theme/v3/image/video/products/fzs-fi-v4-genz.webp?v=2" alt="Video Thumbnail">
+          <div class="play-icon-container" data-video-url="https://www.youtube.com/embed/rpo3AdsfSqs?autoplay=1
+          ">
+              <div class="play-icon">&#9658;</div>
+          </div>
+      </div>
   </div>
 
-  <div id="card3" class="card">
-    <h1>Updates</h1>
-    <img src="Images/bike5.jpg" alt="">
-
+  <div id="videoPopup" class="popup">
+      <div class="popup-content">
+          <span class="close-button">&times;</span>
+          <iframe id="youtubeVideo" width="540" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+  </div>
   </div>
 
-  <div id="card4" class="card">
-    <h1>Gallary</h1>
-    <img src="Images/bike8.jpg" alt="">
-
-  </div>
+  <!-- <div id="content6" class="contentsudo">
+      <h2>Community Content</h2>
+      <p>This is the content for Community.</p>
+  </div> -->
 
 
 

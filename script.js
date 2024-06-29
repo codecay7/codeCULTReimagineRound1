@@ -28,19 +28,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Sudhanshu feature toggle card
 
-document.querySelectorAll('.toggle-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    const targetCard = document.getElementById(button.dataset.target);
-    if (targetCard.style.display !== 'block') {
-      document.querySelectorAll('.card').forEach(card => card.style.display = 'none');
-      targetCard.style.display = 'block';
-    }
-  });
-});
+document.addEventListener("DOMContentLoaded", function() {
+  const navbarItems = document.querySelectorAll('.navbar-item');
+  const contents = document.querySelectorAll('.contentsudo');
+  contents[0].classList.add('active');
+  navbarItems.forEach(item => {
+      item.addEventListener('click', function() {
 
-document.querySelectorAll('.close-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    button.closest('.card').style.display = 'none';
+          navbarItems.forEach(navItem => navItem.classList.remove('active'));
+          item.classList.add('active');
+          contents.forEach(content => content.classList.remove('active'));
+          const target = item.getAttribute('data-target');
+          document.getElementById(target).classList.add('active');
+          if (target === 'content1-B') {
+              document.getElementById(target).classList.add('active');
+          }
+      });
   });
 });
 
@@ -73,3 +76,45 @@ const tl = gsap.timeline({ repeat: -1 });
 tl.to(heading, { duration: 2, color: 'red' })
   .to(heading, { duration: 2, color: 'white' })
   .to(heading, { duration: 2, color: 'blue' });
+
+
+ // Sliding image of content1
+ document.addEventListener('DOMContentLoaded', function() {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('#content1 .slider-item');
+  const dots = document.querySelectorAll('.dot');
+  const totalSlides = slides.length;
+
+  function changeSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    slides.forEach((slide, index) => {
+      slide.style.display = index === currentSlide ? 'block' : 'none';
+    });
+
+   
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentSlide);
+    });
+  }
+
+  setInterval(changeSlide, 5000); 
+});
+
+// video-section of toggle
+document.querySelectorAll('.play-icon-container').forEach(function(playButton) {
+  playButton.addEventListener('click', function() {
+      var videoPopup = document.getElementById('videoPopup');
+      var youtubeVideo = document.getElementById('youtubeVideo');
+
+      youtubeVideo.src = playButton.getAttribute('data-video-url');
+      videoPopup.style.display = 'flex';
+  });
+});
+
+document.querySelector('.close-button').addEventListener('click', function() {
+  var videoPopup = document.getElementById('videoPopup');
+  var youtubeVideo = document.getElementById('youtubeVideo');
+
+  youtubeVideo.src = '';
+  videoPopup.style.display = 'none';
+});
