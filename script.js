@@ -86,17 +86,35 @@ tl.to(heading, { duration: 2, color: 'red' })
   const totalSlides = slides.length;
 
   function changeSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides; // Move to the next slide or loop back to the first slide
+    currentSlide = (currentSlide + 1) % totalSlides;
     slides.forEach((slide, index) => {
       slide.style.display = index === currentSlide ? 'block' : 'none';
     });
 
-    // Update active dot
+   
     dots.forEach((dot, index) => {
       dot.classList.toggle('active', index === currentSlide);
     });
   }
 
-  setInterval(changeSlide, 5000); // Change slide every 5 seconds
+  setInterval(changeSlide, 5000); 
 });
 
+// video-section of toggle
+document.querySelectorAll('.play-icon-container').forEach(function(playButton) {
+  playButton.addEventListener('click', function() {
+      var videoPopup = document.getElementById('videoPopup');
+      var youtubeVideo = document.getElementById('youtubeVideo');
+
+      youtubeVideo.src = playButton.getAttribute('data-video-url');
+      videoPopup.style.display = 'flex';
+  });
+});
+
+document.querySelector('.close-button').addEventListener('click', function() {
+  var videoPopup = document.getElementById('videoPopup');
+  var youtubeVideo = document.getElementById('youtubeVideo');
+
+  youtubeVideo.src = '';
+  videoPopup.style.display = 'none';
+});
